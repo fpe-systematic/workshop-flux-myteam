@@ -1,0 +1,18 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: podinfo1
+spec:
+  interval: 10m
+  timeout: 5m
+  chart:
+    spec:
+      chart: podinfo
+      version: 6.17.0
+      sourceRef:
+        kind: HelmRepository
+        name: podinfo
+  releaseName: podinfo1
+  values:
+    replicaCount: 3
