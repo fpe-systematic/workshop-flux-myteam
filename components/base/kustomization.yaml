@@ -1,5 +1,0 @@
-resources:
-  - namespace.yaml
-  - configmap1.yaml
-  - configmap2.yaml
-  - configmap3.yaml
